@@ -80,3 +80,27 @@ Toevoegen van map `.husky`
 Installeren
 `npm run prepare`
 `npx husky add .husky/pre-commit "npm run lint:staged"`
+
+# [Cypress](https://go.cypress.io/)
+
+`npm install cypress --save-dev`
+
+Scripts in `package.json`
+
+```
+"scripts": {
+  "e2e:verify": "cypress verify",
+  "e2e:start:build": "npm run build && concurrently --raw --kill-others --success \"all\" \"npm run preview\" \"cypress open --e2e --config-file cypress.prod.ts\"",
+  "e2e:start:dev": "concurrently --raw --kill-others --success \"all\" \"npm run dev\" \"cypress open --e2e\"",
+  "e2e:run:build": "npm run build && concurrently --raw --kill-others --success \"all\" \"npm run preview\" \"cypress run --e2e --config-file cypress.prod.ts\"",
+  "e2e:run:dev": "concurrently --raw --kill-others --success \"all\" \"npm run dev\" \"cypress run --e2e\"",
+},
+```
+
+# [PostCSS](https://github.com/postcss) && [cssnano](https://cssnano.co/)
+
+`npm i -D cssnano`
+`npm i -D autoprefixer`
+
+Bestand toegevoegd:
+`postcss.config.cjs`
