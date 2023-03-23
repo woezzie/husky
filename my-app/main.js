@@ -2,6 +2,10 @@ import './style.css';
 import javascriptLogo from './javascript.svg';
 import { setupCounter } from './counter.js';
 
+const rootElement = document.createElement('div');
+rootElement.id = 'app';
+document.querySelector('body').append(rootElement);
+
 document.querySelector('#app').innerHTML = `
   <div>
     <a href="https://vitejs.dev" target="_blank">
