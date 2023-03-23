@@ -19,6 +19,7 @@
     "e2e:run:dev": "concurrently --raw --kill-others --success \"all\" \"npm run dev\" \"cypress run --e2e\""
   },
   "devDependencies": {
+    "@rollup/plugin-html": "^1.0.2",
     "autoprefixer": "^10.4.14",
     "concurrently": "^7.6.0",
     "cssnano": "^5.1.15",
@@ -32,6 +33,7 @@
     "husky": "^8.0.3",
     "lint-staged": "^13.1.2",
     "prettier": "2.8.4",
+    "rollup-plugin-sri": "^1.3.4",
     "vite": "^4.1.0"
   }
 }
