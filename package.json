@@ -8,7 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "format": "prettier -w --list-different .",
-    "lint": "eslint .",
+    "lint": "eslint ./my-app",
     "lint:fix": "eslint --fix .",
     "lint:staged": "lint-staged",
     "prepare": "husky install",
